@@ -1,0 +1,12 @@
+[Unit]
+Description=GPU Activity LED Indicator Daemon
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/gpu_activity_led.py
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
